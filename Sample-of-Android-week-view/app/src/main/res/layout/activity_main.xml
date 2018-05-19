@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_date"
-        app:firstDayOfWeek2="sunday"
+        app:firstDayOfWeek2="monday"
         app:headerBackgroundColor="#455964"
         app:headerDayLabelNormalTextColor="#ffffff"
         app:headerDayLabelTextSize="20sp"

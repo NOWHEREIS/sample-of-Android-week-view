@@ -68,7 +68,7 @@ public class MainActivity extends Activity implements WeekDayView.MonthChangeLis
      * @param shortDate True if the date values should be short.
      */
     private void setupDateTimeInterpreter(final boolean shortDate) {
-        final String[] weekLabels={"日","一","二","三","四","五","六"};
+        final String[] weekLabels={"D","L","M","X","J","V","S"};
         mWeekView.setDateTimeInterpreter(new DateTimeInterpreter() {
             @Override
             public String interpretDate(Calendar date) {
@@ -213,7 +213,7 @@ public class MainActivity extends Activity implements WeekDayView.MonthChangeLis
 
     private String getEventTitle(Calendar time) {
         return String.format("Event of %02d:%02d %s/%d", time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE), time.get(Calendar.MONTH) + 1, time.get(Calendar.DAY_OF_MONTH));
-    }
+}
 
     @Override
     public void onEventClick(WeekViewEvent event, RectF eventRect) {
@@ -233,7 +233,7 @@ public class MainActivity extends Activity implements WeekDayView.MonthChangeLis
 
     @Override
     public void onEmptyViewLongPress(Calendar time) {
-        Toast.makeText(MainActivity.this, "Empty View long  clicked " + time.get(Calendar.YEAR) + "/" + time.get(Calendar.MONTH) + "/" + time.get(Calendar.DAY_OF_MONTH), Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Empty View long  clicked " + time.get(Calendar.YEAR) + "/" + time.get(Calendar.MONTH) + "/" + time.get(Calendar.DAY_OF_MONTH), Toast.LENGTH_LONG).show();
 
     }
 
@@ -245,6 +245,6 @@ public class MainActivity extends Activity implements WeekDayView.MonthChangeLis
     @Override
     public void onSelectedDaeChange(Calendar selectedDate) {
         mWeekHeaderView.setSelectedDay(selectedDate);
-        mTv_date.setText(selectedDate.get(Calendar.YEAR)+"年"+(selectedDate.get(Calendar.MONTH)+1)+"月");
+        mTv_date.setText(selectedDate.get(Calendar.YEAR)+"Año"+(selectedDate.get(Calendar.MONTH)+1)+"Mes");
     }
 }

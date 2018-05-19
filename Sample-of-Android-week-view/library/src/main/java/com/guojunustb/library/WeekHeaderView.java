@@ -360,7 +360,7 @@ public class WeekHeaderView extends View {
     public DateTimeInterpreter getDateTimeInterpreter() {
         if (mDateTimeInterpreter == null) {
             mDateTimeInterpreter = new DateTimeInterpreter() {
-                final String[] weekLabels = {"日", "一", "二", "三", "四", "五", "六"};
+                final String[] weekLabels = {"D", "L", "M", "X", "J", "V", "S"};
 
                 @Override
                 public String interpretDate(Calendar date) {
